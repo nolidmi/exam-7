@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Items from "./components/items/items";
+import OrderType from "./type d";
+
+import waffles from './assets/vafli.png'
+import icecream from './assets/icecream.png.png'
+import donut from './assets/ponchik.png.png'
+import tea from './assets/tea.png.png'
+import coffee from './assets/coffee.png'
+import juice from './assets/juse.png'
+
 
 function App() {
+  const [order, setOrder] = useState([]);
+  if (order.length === 0) {
+    order.push();
+  }
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="Order Details"></div>
+      <div className="Add items d-flex justify-content-between">
+        <Items/>
+        <Items/>
+        <Items/>
+      </div>
     </div>
   );
 }
